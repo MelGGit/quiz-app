@@ -1,0 +1,23 @@
+.quiz-card__tag-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+.quiz-card__tag-list > li {
+  background: rgba(255, 90, 54, 0.1);
+  list-style: none;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #193251;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0 0.25rem 0.25rem 0;
+  display: list-item;
+}
