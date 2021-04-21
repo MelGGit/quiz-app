@@ -9,6 +9,7 @@
 
 .quiz-card__question {
   margin-bottom: 1em;
+  font-size: 1.5rem;
 }
 
 .quiz-card__button {
@@ -17,6 +18,7 @@
   background: var(--color-highlight);
   border-style: none;
   border-radius: 0.312rem;
+  cursor: pointer;
 }
 
 .quiz-card__tag-list {
@@ -25,10 +27,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0;
-}
-
-ul {
-  list-style: disc;
 }
 
 .quiz-card__tag-list > li {
@@ -44,16 +42,28 @@ ul {
 
 .quiz-card__bookmark {
   background: var(--color-background);
-  border-right: 1.5rem solid var(--color-background-akzent);
-  border-left: 1.5rem solid var(--color-background-akzent);
-  border-bottom: 1rem solid transparent;
-  width: 3rem;
   height: 3rem;
   position: absolute;
   top: -1.5rem;
   right: 1.5rem;
+  appearance: none;
+  border-left: 1.5rem solid var(--color-background-akzent);
+  border-right: 1.5rem solid var(--color-background-akzent);
+  border-bottom: 1rem solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s border;
 }
 
-.quiz-card__bookmark--selected {
-  border: var(--color-highlight);
+.quiz-card__bookmark:checked {
+  border-right-color: var(--color-highlight);
+  border-left-color: var(--color-highlight);
+  animation: checked 0.4s;
+  transition: 0.1s 0.3s border;
+}
+
+@keyframes checked {
+  80% {
+    transform: scale(0.8);
+  }
 }
