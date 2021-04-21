@@ -42,7 +42,7 @@ ul {
 
 .quiz-card__bookmark {
   border: 0.001rem solid black;
-  background: white;
+  background: var(--color-background);
   box-shadow: 0.2rem 0.1rem 0.1rem rgb(25, 50, 81, 50%);
   width: 3rem;
   height: 3rem;
