@@ -3,6 +3,7 @@
   width: 100%;
   padding: 0.5rem;
   position: fixed;
+  height: 3rem;
   z-index: 100;
 }
 

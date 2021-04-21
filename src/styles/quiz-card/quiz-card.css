@@ -1,6 +1,7 @@
 .quiz-card {
   border-radius: 16px;
   padding: 2rem 2.25rem;
+  max-width: 35rem;
   box-shadow: 0 0 10px rgb(25, 50, 81, 10%), 0 20px 40px rgb(25, 50, 81, 50%);
   position: relative;
   margin-top: 4rem;
@@ -42,12 +43,17 @@ ul {
 }
 
 .quiz-card__bookmark {
-  border: 0.001rem solid black;
   background: var(--color-background);
-  box-shadow: 0.2rem 0.1rem 0.1rem rgb(25, 50, 81, 50%);
+  border-right: 1.5rem solid var(--color-background-akzent);
+  border-left: 1.5rem solid var(--color-background-akzent);
+  border-bottom: 1rem solid transparent;
   width: 3rem;
   height: 3rem;
   position: absolute;
   top: -1.5rem;
   right: 1.5rem;
+}
+
+.quiz-card__bookmark--selected {
+  border: var(--color-highlight);
 }
