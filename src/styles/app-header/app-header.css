@@ -2,6 +2,8 @@
   background: var(--color-background-akzent);
   width: 100%;
   padding: 0.5rem;
+  position: fixed;
+  z-index: 100;
 }
 
 .app-header__heading {

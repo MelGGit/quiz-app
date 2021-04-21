@@ -24,3 +24,7 @@ input,
 button {
   font-size: 1em;
 }
+
+main {
+  padding: 4rem 8rem;
+}

@@ -3,6 +3,7 @@
   padding: 2rem 2.25rem;
   box-shadow: 0 0 10px rgb(25, 50, 81, 10%), 0 20px 40px rgb(25, 50, 81, 50%);
   position: relative;
+  margin-top: 4rem;
 }
 
 .quiz-card__question {
