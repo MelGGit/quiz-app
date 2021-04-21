@@ -25,5 +25,6 @@
   "tag-self-close": true,
   "tagname-lowercase": true,
   "tags-check": false,
-  "title-require": false
+  "title-require": false,
+  "input-requires-label": false
 }

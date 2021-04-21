@@ -1,0 +1,69 @@
+.quiz-card {
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  max-width: 35rem;
+  box-shadow: 0 0 10px rgb(25, 50, 81, 10%), 0 20px 40px rgb(25, 50, 81, 50%);
+  position: relative;
+  margin-top: 4rem;
+}
+
+.quiz-card__question {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+
+.quiz-card__button {
+  width: 100%;
+  padding: 0.5rem 0.25rem;
+  background: var(--color-highlight);
+  border-style: none;
+  border-radius: 0.312rem;
+  cursor: pointer;
+}
+
+.quiz-card__tag-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.quiz-card__tag-list > li {
+  background: var(--color-background-akzent);
+  list-style: none;
+  font-weight: bold;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0 0.25rem 0.25rem 0;
+  display: list-item;
+}
+
+.quiz-card__bookmark {
+  background: var(--color-background);
+  height: 3rem;
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+  appearance: none;
+  border-left: 1.5rem solid var(--color-background-akzent);
+  border-right: 1.5rem solid var(--color-background-akzent);
+  border-bottom: 1rem solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s border;
+}
+
+.quiz-card__bookmark:checked {
+  border-right-color: var(--color-highlight);
+  border-left-color: var(--color-highlight);
+  animation: checked 0.4s;
+  transition: 0.1s 0.3s border;
+}
+
+@keyframes checked {
+  80% {
+    transform: scale(0.8);
+  }
+}
