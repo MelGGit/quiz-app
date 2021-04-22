@@ -1,0 +1,15 @@
+.nav-bar {
+  background: var(--color-background-akzent);
+}
+
+.nav-bar__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-bar__logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
