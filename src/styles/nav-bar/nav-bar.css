@@ -30,5 +30,5 @@
 }
 
 .nav-bar__list-item:hover {
-  background: var(--color-highlight);
+  background: red;
 }
