@@ -3,4 +3,6 @@
   --color-background-akzent: #dbe2ef;
   --color-letters: #112d4e;
   --color-highlight: #3f72af;
+  --color-bookmark-checked: rgb(0, 128, 128);
+  --color-bookmark: rgba(0, 128, 128, 30%);
 }

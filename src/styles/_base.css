@@ -11,6 +11,14 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
   margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 3rem 1fr 3rem;
+  grid-template-areas: 'header' 'main' 'footer';
+}
+
+footer {
+  grid-area: 'footer';
 }
 
 h1,
@@ -26,5 +34,10 @@ button {
 }
 
 main {
-  padding: 4rem 8rem;
+  width: 100%;
+  grid-area: 'main';
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
