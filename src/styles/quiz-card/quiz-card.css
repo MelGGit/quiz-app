@@ -1,14 +1,18 @@
 .quiz-card {
   border-radius: 16px;
   padding: 2rem 2.25rem;
-  max-width: 35rem;
+  width: min(90%, 35rem);
   box-shadow: 0 0 10px rgb(25, 50, 81, 10%), 0 20px 40px rgb(25, 50, 81, 50%);
   position: relative;
   margin-top: 4rem;
 }
 
 .quiz-card:first-child {
-  margin-top: 0;
+  margin-top: 4rem;
+}
+
+.quiz-card:last-child {
+  margin-bottom: 4rem;
 }
 
 .quiz-card__question {
@@ -51,8 +55,8 @@
   top: -1.5rem;
   right: 1.5rem;
   appearance: none;
-  border-left: 1.5rem solid var(--color-background-akzent);
-  border-right: 1.5rem solid var(--color-background-akzent);
+  border-left: 1.5rem solid var(--color-bookmark);
+  border-right: 1.5rem solid var(--color-bookmark);
   border-bottom: 1rem solid transparent;
   outline: none;
   cursor: pointer;
@@ -60,8 +64,8 @@
 }
 
 .quiz-card__bookmark:checked {
-  border-right-color: var(--color-highlight);
-  border-left-color: var(--color-highlight);
+  border-right-color: var(--color-bookmark-checked);
+  border-left-color: var(--color-bookmark-checked);
   animation: checked 0.4s;
   transition: 0.1s 0.3s border;
 }

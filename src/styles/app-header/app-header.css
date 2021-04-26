@@ -1,8 +1,10 @@
 .app-header {
-  background: var(--color-background-akzent);
+  background: var(--color-letters);
+  color: white;
   width: 100%;
   padding: 0.5rem;
   height: 3rem;
+  grid-area: 'header';
 }
 
 .app-header__heading {
