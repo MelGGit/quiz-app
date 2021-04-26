@@ -26,5 +26,6 @@
   "tagname-lowercase": true,
   "tags-check": false,
   "title-require": false,
-  "input-requires-label": false
+  "input-requires-label": false,
+  "inline-style-disabled": fasle
 }
