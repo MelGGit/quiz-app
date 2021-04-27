@@ -9,6 +9,7 @@ const buttonCreate = document.querySelector('.nav-bar__create')
 const buttonProfile = document.querySelector('.nav-bar__profile')
 
 const header = document.querySelector('.app-header__heading')
+const bookmark = document.querySelector('.quiz-card__bookmark')
 
 buttonHome.addEventListener('click', () => {
   pageHome.classList.remove('hidden')
@@ -64,4 +65,8 @@ buttonProfile.addEventListener('click', () => {
   buttonProfile.classList.add('active')
 
   header.innerHTML = 'Profile'
+})
+
+bookmark.addEventListener('click', () => {
+  bookmark.classList.toggle('checked')
 })
