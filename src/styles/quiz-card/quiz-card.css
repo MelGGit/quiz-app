@@ -62,16 +62,3 @@
   cursor: pointer;
   transition: 0.1s border;
 }
-
-.quiz-card__bookmark:checked {
-  border-right-color: var(--color-bookmark-checked);
-  border-left-color: var(--color-bookmark-checked);
-  animation: checked 0.4s;
-  transition: 0.1s 0.3s border;
-}
-
-@keyframes checked {
-  80% {
-    transform: scale(0.8);
-  }
-}
