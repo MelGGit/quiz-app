@@ -10,6 +10,8 @@ const buttonProfile = document.querySelector('.nav-bar__profile')
 
 const header = document.querySelector('.app-header__heading')
 const bookmark = document.querySelector('.quiz-card__bookmark')
+const buttonAnswer = document.querySelector('.quiz-card__button')
+const answer = document.querySelector('.quiz-card__answer')
 
 buttonHome.addEventListener('click', () => {
   pageHome.classList.remove('hidden')
@@ -69,4 +71,8 @@ buttonProfile.addEventListener('click', () => {
 
 bookmark.addEventListener('click', () => {
   bookmark.classList.toggle('checked')
+})
+
+buttonAnswer.addEventListener('click', () => {
+  answer.classList.toggle('hidden')
 })
