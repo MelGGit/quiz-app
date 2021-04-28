@@ -24,7 +24,7 @@ buttonHome.addEventListener('click', () => {
   buttonCreate.classList.remove('active')
   buttonProfile.classList.remove('active')
 
-  header.innerHTML = 'Quiz App'
+  header.innerText = 'Quiz App'
 })
 
 buttonBookmark.addEventListener('click', () => {
@@ -38,7 +38,7 @@ buttonBookmark.addEventListener('click', () => {
   buttonCreate.classList.remove('active')
   buttonProfile.classList.remove('active')
 
-  header.innerHTML = 'Bookmarks'
+  header.innerText = 'Bookmarks'
 })
 
 buttonCreate.addEventListener('click', () => {
@@ -52,7 +52,7 @@ buttonCreate.addEventListener('click', () => {
   buttonCreate.classList.add('active')
   buttonProfile.classList.remove('active')
 
-  header.innerHTML = 'Create'
+  header.innerText = 'Create'
 })
 
 buttonProfile.addEventListener('click', () => {
@@ -66,7 +66,7 @@ buttonProfile.addEventListener('click', () => {
   buttonCreate.classList.remove('active')
   buttonProfile.classList.add('active')
 
-  header.innerHTML = 'Profile'
+  header.innerText = 'Profile'
 })
 
 bookmark.addEventListener('click', () => {
