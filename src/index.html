@@ -10,6 +10,7 @@
     />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer type="module" src="./index.js"></script>
   </head>
   <body>
     <header class="app-header">
@@ -19,7 +20,7 @@
       <section class="quiz-card">
         <h2 class="quiz-card__question">Question</h2>
         <button class="quiz-card__button">Show Answer</button>
-        <p class="quiz-card__answer">
+        <p class="quiz-card__answer hidden">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quas.
         </p>
         <ul class="quiz-card__tag-list">
@@ -28,17 +29,17 @@
           <li>tag</li>
           <li>tag</li>
         </ul>
-        <input
-          type="checkbox"
+        <div
+          role="button"
           class="quiz-card__bookmark"
           aria-label="Add bookmark"
-        />
+        ></div>
       </section>
 
       <section class="quiz-card">
         <h2 class="quiz-card__question">Question</h2>
         <button class="quiz-card__button">Show Answer</button>
-        <p class="quiz-card__answer">
+        <p class="quiz-card__answer hidden">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quas.
         </p>
         <ul class="quiz-card__tag-list">
@@ -47,17 +48,17 @@
           <li>tag</li>
           <li>tag</li>
         </ul>
-        <input
-          type="checkbox"
+        <div
+          role="button"
           class="quiz-card__bookmark"
           aria-label="Add bookmark"
-        />
+        ></div>
       </section>
 
       <section class="quiz-card">
         <h2 class="quiz-card__question">Question</h2>
         <button class="quiz-card__button">Show Answer</button>
-        <p class="quiz-card__answer">
+        <p class="quiz-card__answer hidden">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quas.
         </p>
         <ul class="quiz-card__tag-list">
@@ -66,16 +67,17 @@
           <li>tag</li>
           <li>tag</li>
         </ul>
-        <input
-          type="checkbox"
+        <div
+          role="button"
           class="quiz-card__bookmark"
           aria-label="Add bookmark"
-        />
+        ></div>
       </section>
+
       <section class="quiz-card">
         <h2 class="quiz-card__question">Question</h2>
         <button class="quiz-card__button">Show Answer</button>
-        <p class="quiz-card__answer">
+        <p class="quiz-card__answer hidden">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quas.
         </p>
         <ul class="quiz-card__tag-list">
@@ -84,16 +86,17 @@
           <li>tag</li>
           <li>tag</li>
         </ul>
-        <input
-          type="checkbox"
+        <div
+          role="button"
           class="quiz-card__bookmark"
           aria-label="Add bookmark"
-        />
+        ></div>
       </section>
+
       <section class="quiz-card">
         <h2 class="quiz-card__question">Question</h2>
         <button class="quiz-card__button">Show Answer</button>
-        <p class="quiz-card__answer">
+        <p class="quiz-card__answer hidden">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quas.
         </p>
         <ul class="quiz-card__tag-list">
@@ -102,11 +105,11 @@
           <li>tag</li>
           <li>tag</li>
         </ul>
-        <input
-          type="checkbox"
+        <div
+          role="button"
           class="quiz-card__bookmark"
           aria-label="Add bookmark"
-        />
+        ></div>
       </section>
     </main>
     <main class="page-bookmark hidden"></main>
@@ -115,36 +118,26 @@
 
     <footer>
       <nav class="nav-bar">
-        <ul class="nav-bar__list">
-          <li class="nav-bar__list-item">
-            <a href="#" class="nav-bar__link">
-              <svg>
-                <use href="#home" class="nav-bar__logo" />
-              </svg>
-            </a>
-          </li>
-          <li class="nav-bar__list-item">
-            <a href="#" class="nav-bar__link">
-              <svg>
-                <use href="#bookmark" class="nav-bar__logo" />
-              </svg>
-            </a>
-          </li>
-          <li class="nav-bar__list-item">
-            <a href="#" class="nav-bar__link">
-              <svg>
-                <use href="#create" class="nav-bar__logo" />
-              </svg>
-            </a>
-          </li>
-          <li class="nav-bar__list-item">
-            <a href="#" class="nav-bar__link">
-              <svg>
-                <use href="#profile" class="nav-bar__logo" />
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <button class="nav-bar__button nav-bar__home active">
+          <svg>
+            <use href="#home" class="nav-bar__logo" />
+          </svg>
+        </button>
+        <button class="nav-bar__button nav-bar__bookmark">
+          <svg>
+            <use href="#bookmark" class="nav-bar__logo" />
+          </svg>
+        </button>
+        <button class="nav-bar__button nav-bar__create">
+          <svg>
+            <use href="#create" class="nav-bar__logo" />
+          </svg>
+        </button>
+        <button class="nav-bar__button nav-bar__profile">
+          <svg>
+            <use href="#profile" class="nav-bar__logo" />
+          </svg>
+        </button>
       </nav>
 
       <svg height="0" style="display: none">

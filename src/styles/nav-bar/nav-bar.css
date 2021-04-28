@@ -1,32 +1,25 @@
 .nav-bar {
   background: var(--color-letters);
   width: 100%;
-}
-
-.nav-bar__list {
   display: flex;
-  list-style: none;
-  justify-content: space-around;
-  padding: 0;
-  margin: 0;
+  justify-content: space-evenly;
 }
 
-.nav-bar__list-item {
+.nav-bar__button {
   width: 100%;
-}
-
-.nav-bar__link {
-  width: 100%;
+  background: var(--color-letters);
   height: 3rem;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-bar__logo {
   fill: white;
 }
 
-.nav-bar__list-item:hover {
+.nav-bar__button:hover {
   background: var(--color-highlight);
 }

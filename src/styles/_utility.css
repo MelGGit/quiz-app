@@ -5,3 +5,20 @@
 .m0 {
   margin: 0 !important;
 }
+
+.active {
+  background: var(--color-highlight) !important;
+}
+
+.checked {
+  border-left: 1.5rem solid var(--color-bookmark-checked) !important;
+  border-right: 1.5rem solid var(--color-bookmark-checked) !important;
+  animation: checked 0.4s;
+  transition: 0.1s 0.3s border;
+}
+
+@keyframes checked {
+  80% {
+    transform: scale(0.8);
+  }
+}
