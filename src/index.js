@@ -1,4 +1,5 @@
 import getElement from './utils/getElement'
+import getElements from './utils/getElements'
 
 const pageHome = getElement('.page-home')
 const pageBookmark = getElement('.page-bookmark')
