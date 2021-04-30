@@ -1,72 +1,42 @@
-const pageHome = document.querySelector('.page-home')
-const pageBookmark = document.querySelector('.page-bookmark')
-const pageCreate = document.querySelector('.page-create')
-const pageProfile = document.querySelector('.page-profile')
+import getElement from './utils/getElement'
 
-const buttonHome = document.querySelector('.nav-bar__home')
-const buttonBookmark = document.querySelector('.nav-bar__bookmark')
-const buttonCreate = document.querySelector('.nav-bar__create')
-const buttonProfile = document.querySelector('.nav-bar__profile')
+const pageHome = getElement('.page-home')
+const pageBookmark = getElement('.page-bookmark')
+const pageCreate = getElement('.page-create')
+const pageProfile = getElement('.page-profile')
 
-const header = document.querySelector('.app-header__heading')
-const bookmark = document.querySelector('.quiz-card__bookmark')
-const buttonAnswer = document.querySelector('.quiz-card__button')
-const answer = document.querySelector('.quiz-card__answer')
+const buttonHome = getElement('.nav-bar__home')
+const buttonBookmark = getElement('.nav-bar__bookmark')
+const buttonCreate = getElement('.nav-bar__create')
+const buttonProfile = getElement('.nav-bar__profile')
+
+const header = getElement('.app-header__heading')
+const bookmark = getElement('.quiz-card__bookmark')
+const buttonAnswer = getElement('.quiz-card__button')
+const answer = getElement('.quiz-card__answer')
 
 buttonHome.addEventListener('click', () => {
-  pageHome.classList.remove('hidden')
-  pageBookmark.classList.add('hidden')
-  pageCreate.classList.add('hidden')
-  pageProfile.classList.add('hidden')
-
-  buttonHome.classList.add('active')
-  buttonBookmark.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
-
-  header.innerText = 'Quiz App'
+  setActivePage(pageHome)
+  setActiveButton(buttonHome)
+  setHeaderText('Quiz App')
 })
 
 buttonBookmark.addEventListener('click', () => {
-  pageHome.classList.add('hidden')
-  pageBookmark.classList.remove('hidden')
-  pageCreate.classList.add('hidden')
-  pageProfile.classList.add('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmark.classList.add('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
-
-  header.innerText = 'Bookmarks'
+  setActivePage(pageBookmark)
+  setActiveButton(buttonBookmark)
+  setHeaderText('Bookmarks')
 })
 
 buttonCreate.addEventListener('click', () => {
-  pageHome.classList.add('hidden')
-  pageBookmark.classList.add('hidden')
-  pageCreate.classList.remove('hidden')
-  pageProfile.classList.add('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmark.classList.remove('active')
-  buttonCreate.classList.add('active')
-  buttonProfile.classList.remove('active')
-
-  header.innerText = 'Create'
+  setActivePage(pageCreate)
+  setActiveButton(buttonCreate)
+  setHeaderText('Create')
 })
 
 buttonProfile.addEventListener('click', () => {
-  pageHome.classList.add('hidden')
-  pageBookmark.classList.add('hidden')
-  pageCreate.classList.add('hidden')
-  pageProfile.classList.remove('hidden')
-
-  buttonHome.classList.remove('active')
-  buttonBookmark.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.add('active')
-
-  header.innerText = 'Profile'
+  setActivePage(pageProfile)
+  setActiveButton(buttonProfile)
+  setHeaderText('Profile')
 })
 
 bookmark.addEventListener('click', () => {
@@ -76,3 +46,31 @@ bookmark.addEventListener('click', () => {
 buttonAnswer.addEventListener('click', () => {
   answer.classList.toggle('hidden')
 })
+
+function setActivePage(page) {
+  hideAllPages()
+  page.classList.remove('hidden')
+}
+
+function setActiveButton(button) {
+  inactivateAllButtons()
+  button.classList.add('active')
+}
+
+function hideAllPages() {
+  pageHome.classList.add('hidden')
+  pageBookmark.classList.add('hidden')
+  pageCreate.classList.add('hidden')
+  pageProfile.classList.add('hidden')
+}
+
+function inactivateAllButtons() {
+  buttonHome.classList.remove('active')
+  buttonBookmark.classList.remove('active')
+  buttonCreate.classList.remove('active')
+  buttonProfile.classList.remove('active')
+}
+
+function setHeaderText(text) {
+  header.innerText = text
+}
