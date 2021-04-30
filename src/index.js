@@ -12,9 +12,22 @@ const buttonCreate = getElement('.nav-bar__create')
 const buttonProfile = getElement('.nav-bar__profile')
 
 const header = getElement('.app-header__heading')
-const bookmark = getElement('.quiz-card__bookmark')
-const buttonAnswer = getElement('.quiz-card__button')
-const answer = getElement('.quiz-card__answer')
+
+const bookmarks = getElements('.quiz-card__bookmark')
+bookmarks.forEach(bookmark => {
+  bookmark.addEventListener('click', () => {
+    bookmark.classList.toggle('checked')
+  })
+})
+
+const quizCards = getElements('.quiz-card')
+quizCards.forEach(card => {
+  const answerButton = getElement('.quiz-card__button', card)
+  answerButton.addEventListener('click', () => {
+    const answer = getElement('.quiz-card__answer', card)
+    answer.classList.toggle('hidden')
+  })
+})
 
 buttonHome.addEventListener('click', () => {
   setActivePage(pageHome)
@@ -38,14 +51,6 @@ buttonProfile.addEventListener('click', () => {
   setActivePage(pageProfile)
   setActiveButton(buttonProfile)
   setHeaderText('Profile')
-})
-
-bookmark.addEventListener('click', () => {
-  bookmark.classList.toggle('checked')
-})
-
-buttonAnswer.addEventListener('click', () => {
-  answer.classList.toggle('hidden')
 })
 
 function setActivePage(page) {
