@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-header__heading">Quiz App</h1>
+      <h1 data-header class="app-header__heading">Quiz App</h1>
     </header>
     <main data-page="home" class="page-home">
       <section class="quiz-card">
@@ -120,22 +120,38 @@
 
     <footer>
       <nav class="nav-bar">
-        <button data-nav="home" class="nav-bar__button nav-bar__home active">
+        <button
+          data-nav="home"
+          data-header-text="Quiz App"
+          class="nav-bar__button nav-bar__home active"
+        >
           <svg>
             <use href="#home" class="nav-bar__logo" />
           </svg>
         </button>
-        <button data-nav="bookmark" class="nav-bar__button nav-bar__bookmark">
+        <button
+          data-nav="bookmark"
+          data-header-text="Bookmarks"
+          class="nav-bar__button nav-bar__bookmark"
+        >
           <svg>
             <use href="#bookmark" class="nav-bar__logo" />
           </svg>
         </button>
-        <button data-nav="create" class="nav-bar__button nav-bar__create">
+        <button
+          data-nav="create"
+          data-header-text="Create"
+          class="nav-bar__button nav-bar__create"
+        >
           <svg>
             <use href="#create" class="nav-bar__logo" />
           </svg>
         </button>
-        <button data-nav="profile" class="nav-bar__button nav-bar__profile">
+        <button
+          data-nav="profile"
+          data-header-text="Profile"
+          class="nav-bar__button nav-bar__profile"
+        >
           <svg>
             <use href="#profile" class="nav-bar__logo" />
           </svg>
