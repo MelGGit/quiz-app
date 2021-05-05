@@ -16,7 +16,7 @@
     <header class="app-header">
       <h1 data-header class="app-header__heading">Quiz App</h1>
     </header>
-    <main data-page="home" class="page-home">
+    <main data-page="home" class="page-home" data-js="home">
       <section class="quiz-card">
         <h2 class="quiz-card__question">What is HTML?</h2>
         <button class="quiz-card__button">Show Answer</button>
@@ -115,7 +115,27 @@
       </section>
     </main>
     <main data-page="bookmark" class="page-bookmark hidden"></main>
-    <main data-page="create" class="page-create hidden"></main>
+    <main data-page="create" class="page-create hidden">
+      <!DOCTYPE html>
+      <form class="create-form" data-js="form">
+        <label class="create-form__label"
+          >Create Question:
+          <input
+            type="text"
+            class="create-form__input"
+            name="question"
+            data-js="question" /></label
+        ><label class="create-form__label"
+          >Create Answer:
+          <textarea
+            class="create-form__textarea"
+            name="answer"
+            data-js="answer"
+          ></textarea>
+        </label>
+        <button class="create-form__submit">Create</button>
+      </form>
+    </main>
     <main data-page="profile" class="page-profile hidden"></main>
 
     <footer>
