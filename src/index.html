@@ -14,9 +14,9 @@
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-header__heading">Quiz App</h1>
+      <h1 data-header class="app-header__heading">Quiz App</h1>
     </header>
-    <main class="page-home">
+    <main data-page="home" class="page-home">
       <section class="quiz-card">
         <h2 class="quiz-card__question">What is HTML?</h2>
         <button class="quiz-card__button">Show Answer</button>
@@ -114,28 +114,44 @@
         ></div>
       </section>
     </main>
-    <main class="page-bookmark hidden"></main>
-    <main class="page-create hidden"></main>
-    <main class="page-profile hidden"></main>
+    <main data-page="bookmark" class="page-bookmark hidden"></main>
+    <main data-page="create" class="page-create hidden"></main>
+    <main data-page="profile" class="page-profile hidden"></main>
 
     <footer>
       <nav class="nav-bar">
-        <button class="nav-bar__button nav-bar__home active">
+        <button
+          data-nav="home"
+          data-header-text="Quiz App"
+          class="nav-bar__button nav-bar__home active"
+        >
           <svg>
             <use href="#home" class="nav-bar__logo" />
           </svg>
         </button>
-        <button class="nav-bar__button nav-bar__bookmark">
+        <button
+          data-nav="bookmark"
+          data-header-text="Bookmarks"
+          class="nav-bar__button nav-bar__bookmark"
+        >
           <svg>
             <use href="#bookmark" class="nav-bar__logo" />
           </svg>
         </button>
-        <button class="nav-bar__button nav-bar__create">
+        <button
+          data-nav="create"
+          data-header-text="Create"
+          class="nav-bar__button nav-bar__create"
+        >
           <svg>
             <use href="#create" class="nav-bar__logo" />
           </svg>
         </button>
-        <button class="nav-bar__button nav-bar__profile">
+        <button
+          data-nav="profile"
+          data-header-text="Profile"
+          class="nav-bar__button nav-bar__profile"
+        >
           <svg>
             <use href="#profile" class="nav-bar__logo" />
           </svg>
