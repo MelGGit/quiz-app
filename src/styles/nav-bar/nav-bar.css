@@ -17,7 +17,7 @@
 }
 
 .nav-bar__logo {
-  fill: white;
+  fill: var(--color-background);
 }
 
 .nav-bar__button:hover {

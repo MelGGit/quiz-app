@@ -7,6 +7,7 @@ console.clear()
 setupNavigation()
 setupBookmarks()
 setupQuizCards()
+darkMode()
 
 const form = document.querySelector('[data-js="form"]')
 const homePage = document.querySelector('[data-js="home"]')
@@ -58,5 +59,12 @@ function createTagList(tagList, tags) {
     const tagEl = document.createElement('li')
     tagEl.innerText = tag
     tagList.append(tagEl)
+  })
+}
+
+function darkMode() {
+  const button = document.querySelector('[data-js="darkmode"]')
+  button.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode')
   })
 }

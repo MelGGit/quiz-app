@@ -5,3 +5,9 @@
 @import './quiz-card/quiz-card.css';
 @import './nav-bar/nav-bar.css';
 @import './create-form/create-form.css';
+
+.dark-mode {
+  --color-background: black;
+
+  transition: all 1s;
+}
