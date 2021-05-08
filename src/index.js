@@ -15,11 +15,12 @@ form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(event) {
   event.preventDefault()
-  const { question, answer } = form.elements
+  const { question, answer, tags } = form.elements
 
   const newCard = {
     question: question.value,
     answer: answer.value,
+    tags: tags.value.split(','),
   }
 
   renderCard(newCard)
@@ -27,7 +28,7 @@ function handleSubmit(event) {
 }
 
 function renderCard(card) {
-  const { question, answer } = card
+  const { question, answer, tags } = card
   const newCardElement = document.createElement('section')
   newCardElement.classList.add('quiz-card')
   newCardElement.innerHTML = `
@@ -37,10 +38,6 @@ function renderCard(card) {
         ${answer}
     </p>
     <ul class="quiz-card__tag-list">
-        <li>tag</li>
-        <li>tag</li>
-        <li>tag</li>
-        <li>tag</li>
     </ul>
     <div
         role="button"
@@ -49,4 +46,17 @@ function renderCard(card) {
     ></div>
     `
   homePage.prepend(newCardElement)
+  const tagList = newCardElement.querySelector('ul')
+  createTagList(tagList, tags)
+  alert('new card created')
+  setupBookmarks()
+  setupQuizCards()
+}
+
+function createTagList(tagList, tags) {
+  tags.forEach(tag => {
+    const tagEl = document.createElement('li')
+    tagEl.innerText = tag
+    tagList.append(tagEl)
+  })
 }
